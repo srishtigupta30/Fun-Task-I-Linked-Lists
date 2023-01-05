@@ -1,0 +1,9 @@
+Node* addFirst(int val){
+
+  Node* temp = new Node();
+  temp->data = val;
+  temp->next = *head;
+  *head = temp;
+  return head;
+  
+}
