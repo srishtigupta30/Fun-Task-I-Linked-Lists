@@ -1,0 +1,18 @@
+Node* SortedMerge(Node* l1, Node* l2) {
+
+    Node* result = NULL;
+    if (l1 == NULL)
+        return l2;
+    else if (l2 == NULL)
+        return l1;
+ 
+    if (l1->data <= l2->data) {
+        result = l1;
+        result->next = SortedMerge(l1->next, l2);
+    }
+    else {
+        result = l2;
+        result->next = SortedMerge(l1, l2->next);
+    }
+    return result;
+}
