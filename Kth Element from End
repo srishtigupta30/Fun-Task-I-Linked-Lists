@@ -1,0 +1,19 @@
+void printKthFromLast(Node* head, int K) {
+
+    int len = 0, i;
+    Node* temp = head;
+
+    while (temp != NULL) {
+        temp = temp->next;
+        len++;
+    }
+
+    if (len < K)
+        return;
+    temp = head;
+
+    for (i = 1; i < len - K + 1; i++)
+        temp = temp->next;
+    cout<< temp->data;
+    return;
+}
