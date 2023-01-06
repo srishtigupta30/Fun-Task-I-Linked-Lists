@@ -1,0 +1,17 @@
+void reverseList() {
+  if(head != NULL) {
+    Node* prevNode = head;
+    Node* tempNode = head;
+    Node* curNode = head->next;
+    
+     prevNode->next = NULL;
+    
+    while(curNode != NULL) {
+        tempNode = curNode->next;
+        curNode->next = prevNode;
+        prevNode = curNode;
+        curNode = tempNode;
+    }
+   head = prevNode;
+  }
+} 
