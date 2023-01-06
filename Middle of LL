@@ -1,0 +1,15 @@
+void printMiddle(class Node* head){
+ 
+   if (head) {
+       int len = getLen(head);
+       class Node* temp = head;
+
+        int midIdx = len / 2;
+       
+       while (midIdx--) {
+           temp = temp->next;
+            }
+   cout << "The middle element is " << temp->data<<  endl;
+       }
+  }
+ 
